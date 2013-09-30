@@ -1,0 +1,30 @@
+import pygame, sys, math, random
+pygame.init()
+screen = pygame.display.set_mode([850,495])
+dirt = pygame.image.load("dirt.jpg")
+grass = pygame.image.load("grass.jpg")
+water = pygame.image.load("water.jpg")
+
+terrains = [{"sprite": dirt}, {"sprite": grass}, {"sprite": water}]
+
+themap = [[-1 for x in range(20)] for y in range (20)]
+
+map1 = [0, 2, 1]
+
+for x in range (0,20):
+    for y in range (0,20):
+        themap[x][y] = terrains[themap]
+
+while True:                                
+    pygame.time.delay(20)   
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: 
+            sys.exit()        
+
+    for x in range (0, 20):
+        for y in range (0, 20):
+            screen.blit(themap[x][y]["sprite"], [x * 50, y * 50])
+    
+    
+    pygame.display.flip()
