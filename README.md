@@ -1,6 +1,7 @@
 Zalda
 =====
 
-Zelda like game in python
+(Unfinished) Zelda like game in python
 
-I'm working on it but right now all thats ready is the random map generator in maptest/.
+Zalda is the game maptest is a random generator.
+You know how to run python files... I hope...
